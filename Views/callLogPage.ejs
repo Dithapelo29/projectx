@@ -4,8 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CallPage</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/callLogForm.css">
 </head>
 <body>
-    <h2>Welcome Mr Jack</h2>
+    <header class="main__header">
+        <nav class="main__nav">
+            <ul class="main__Item">
+                <li class="main__Item_List"><a href="/home">Home</a> </li>
+                <li class="main__Item_List"><a class="active" href="/">Create Incident</a></li>
+            </ul>
+        </nav>
+    </header>
+    <form class="form-control" action="/callLog" method="POST">
+        <div class="first_liner">
+            <label for="callType">Call Type:</label>
+            <select id="callType" name="callType">
+                <option value="selct">Select Item...</option>
+                <option value="hardware" >Hardware</option>
+                <option value="software">Software</option>
+            </select>
+
+            <label for="title">Serial Number</label>
+            <input type="text" name="title">
+
+            <label for="position">Office Based:</label>
+            <select id="position" name="position">
+                <option value="selct">Select Item...</option>
+                <option value="frontOffice" >Front Office</option>
+                <option value="backOffice">Back Office</option>
+            </select>
+
+            <label for="equipment">Equipment Type:</label>
+            <select id="equipment" name="equipment">
+                <option value="selct" >Select Item...</option>
+                <option value="screen" >Screen</option>
+                <option value="CPU">CPU</option>
+                <option value="printer">Printer</option>
+                <option value="pinpad">Pinpad</option>
+                <option value="scanner">Scanner</option>
+            </select>
+        </div>
+        
+            <button class="btn" type="submit">LOG CAll</button>
+        
+    </form>
 </body>
 </html>
